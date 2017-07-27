@@ -1,0 +1,8 @@
+---
+ - name: mount iso to /mnt/disk/
+   sudo: yes
+   mount:
+      path: /mnt/disk/
+      src: "{{iso_path}}"
+      state: mounted
+      fstype: auto

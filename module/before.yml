@@ -1,0 +1,21 @@
+---
+ - name: mkdir /mnt/disk/
+   command: "mkdir /mnt/disk/"
+   args:
+      creates: "/mnt/disk/"
+   sudo: yes
+
+ - name: mount iso to /mnt/disk/
+   command: "mount -o loop {{iso_path}} /mnt/disk/"
+   sudo: yes
+
+   #   TASK [createrepo : mount iso to /mnt/disk/] ****************************************************************************************************************************
+   # [WARNING]: Consider using mount module rather than running mount
+   #changed: [lab]
+
+
+   #   TASK [createrepo : mount iso to /mnt/disk/] ****************************************************************************************************************************
+   # [WARNING]: Consider using mount module rather than running mount
+   #fatal: [lab]: FAILED! => {"changed": true, "cmd": ["mount", "-o", "loop", "/root/CentOS-7-x86_64-Minimal-1611.iso", "/mnt/disk/"], "delta": "0:00:00.004300", "end": "2017-07-27 06:58:22.215486", "failed": true, "rc": 1, "start": "2017-07-27 06:58:22.211186", "stderr": "mount: /root/CentOS-7-x86_64-Minimal-1611.iso is already mounted", "stderr_lines": ["mount: /root/CentOS-7-x86_64-Minimal-1611.iso is already mounted"], "stdout": "", "stdout_lines": []}
+	to retry, use: --limit @/home/ianwu/Projects/SEP/script/msdp/roles.retry
+
